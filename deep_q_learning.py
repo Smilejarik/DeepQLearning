@@ -1,7 +1,7 @@
 import gym
 import random
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 from keras import layers
 from skimage.color import rgb2gray
 from skimage.transform import resize
@@ -22,7 +22,7 @@ FLAGS = tf.app.flags.FLAGS
 tf.app.flags.DEFINE_string('train_dir', 'tf_train_breakout',
                            """Directory where to write event logs and checkpoint. """)
 tf.app.flags.DEFINE_string('restore_file_path',
-                           '/home/boyuanf/DeepQLearning/tf_train_breakout/breakout_model_20180610205843_36h_12193ep_sec_version.h5',
+                           'D:/Documents/GitHub/DeepQLearning/tf_train_breakout/breakout_model_20180610205843_36h_12193ep_sec_version.h5',
                            """Path of the restore file """)
 tf.app.flags.DEFINE_integer('num_episode', 100000,
                             """number of epochs of the optimization loop.""")
